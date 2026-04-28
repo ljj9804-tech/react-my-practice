@@ -1,6 +1,11 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 const JoinForm = () => {
+
+  // 순서2
+  // 함수형 컴포넌트에서, ref 달기 위한 방법. 훅스를 이용하기.
+  const passwordConfirmRef = useRef(null);
+
   // 상태(State)를 하나로 묶어 관리하여 데이터의 일관성을 유지합니다.
   //원본 데이터 역할(여기서 useState는 리액트의 데이터를 관리해주는 함수(도구))
   const [form, setForm] = useState({
@@ -36,18 +41,22 @@ const JoinForm = () => {
       return;
     }
 
-    // 통과 시 최종 데이터를 출력하고, 폼을 초기화합니다.
-    alert(
-      `유저명: ${username}, email: ${email}, password: ${password}, passwordConfirm: ${passwordConfirm}`
-    );
+    // // 통과 시 최종 데이터를 출력하고, 폼을 초기화합니다.
+    // alert(
+    //   `유저명: ${username}, email: ${email}, password: ${password}, passwordConfirm: ${passwordConfirm}`
+    // );
 
-    // 상태를 빈 문자열로 되돌려 폼을 초기화합니다.
-    setForm({
-      username: '',
-      email: '',
-      password: '',
-      passwordConfirm: '',
-    });
+    // // 상태를 빈 문자열로 되돌려 폼을 초기화합니다.
+    // setForm({
+    //   username: '',
+    //   email: '',
+    //   password: '',
+    //   passwordConfirm: '',
+    // });
+
+    // 순서3,
+    passwordConfirmRef.current.focus();
+
   };
 
   // UI 렌더링 부분입니다. 
@@ -86,6 +95,9 @@ const JoinForm = () => {
       <input
         type="password"
         name="passwordConfirm"
+        // 방법1,
+        // 순서1,
+        ref={passwordConfirmRef}
         placeholder="passwordConfirm 입력"
         value={passwordConfirm}
         onChange={onChange}
