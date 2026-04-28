@@ -1,6 +1,7 @@
 import EventPractice from './EventPractice';
 import EventPractice2 from './EventPractice2';
 import EventPractice3 from './EventPractice3';
+import JoinForm from './JoinForm';
 
 // 부모 컴포넌트
 const App = () => {
@@ -14,6 +15,8 @@ const App = () => {
       <EventPractice2></EventPractice2>
       <h2>연습3</h2>
       <EventPractice3></EventPractice3>
+      <h2>연습4</h2>
+      <JoinForm></JoinForm>
     </div>
   );
 };

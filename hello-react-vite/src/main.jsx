@@ -1,13 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-// import App from './ch05/App'
-import App from './practice01/App'
-
-
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './ch07/App';
+// import App from './practice01/App'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+  //ch07 작업을 위해 잠시 주석처리(<StrictMode></StrictMode> 부분)
+  // <StrictMode>
+  //   <App />
+  // </StrictMode>,
+
+  <App />,
+);
