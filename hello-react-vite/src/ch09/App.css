@@ -1,0 +1,72 @@
+/* App.css */
+.App {
+  text-align: center;
+}
+
+.App .logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vmin;
+}
+
+.App header {
+  background-color: #282c34;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 실습1 */
+.Ex1-card {
+  background-color: white;
+  border-radius: 12px;
+  /* 그림자 효과: x-offset y-offset blur spread color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #eee; /* 형태를 더 뚜렷하게 하기 위해 추가 */
+}
+
+/* 요소 (Element): 제목 */
+.Ex1-card__title {
+  color: blue;
+  margin-top: 0;
+}
+
+/* 요소 (Element): 내용 */
+.Ex1-card__content {
+  color: gray;
+  margin-bottom: 0;
+}
+
+/* 실습2 */
+.Ex2-card__button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease; /* 변화를 부드럽게 */
+}
+
+/* 마우스를 올렸을 때 (hover) */
+.Ex2-card__button:hover {
+  background-color: #0056b3; /* 배경색이 더 진하게 바뀜 */
+}
+
+/* 클릭했을 때 (active) */
+.Ex2-card__button:active {
+  transform: scale(0.95); /* 5% 정도 작아지며 눌리는 효과 */
+}
