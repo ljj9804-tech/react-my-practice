@@ -1,0 +1,19 @@
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+/* 타입별 색상 정의 */
+.success {
+  background-color: #28a745;
+} /*성공*/
+.warning {
+  background-color: #ffc107;
+  color: #333;
+} /*경고*/
+.error {
+  background-color: #dc3545;
+} /*오류*/

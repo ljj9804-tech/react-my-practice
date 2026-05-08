@@ -1,0 +1,30 @@
+// **문제 2-1** : Sass 변수와 믹스인을 활용하여 크기가 3가지인 버튼 컴포넌트를 만드세요.
+
+// - `$primary`, `$danger` 색상 변수 정의
+// - `@mixin button-size($padding, $font-size)` 믹스인 정의
+// - `.btn-sm`, `.btn-md`, `.btn-lg` 클래스로 크기 구분
+
+$primary: #2987e6;
+$danger: #d32f2f;
+
+@mixin button-size($padding, $font-size){
+    padding: $padding;
+    font-size: $font-size;
+}
+
+.btn {
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    background: $primary;
+    transition: opacity 0.2s;
+
+    &:hover {opacity: 0.85;}
+    &:active {opacity: 0.7;}
+    &.danger {background: $danger;}
+
+    &.btn-sm { @include button-size(0.3rem 0.8rem, 0.8rem)}
+    &.btn-md { @include button-size(0.5rem 1.2rem, 1rem)}
+    &.btn-lg { @include button-size(0.8rem 2rem, 1.3rem)}
+}

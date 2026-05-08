@@ -1,0 +1,14 @@
+
+.btn {
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    background: blue;
+    transition: opacity 0.2s;
+
+    &:hover {opacity: 0.85;}
+    &:active {opacity: 0.7;}
+    &.danger {background: red;}
+
+}
